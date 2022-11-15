@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean name="emp" class="com.fnp.dto.Employee">
+    	<property name="id" value="1"/>
+    	<property name="name" value="john" />
+    </bean>
+    
+    <bean name="student" class="com.fnp.dto.Student">
+    	<property name="id" value="1" />
+    	<property name="e">
+    		<ref bean="emp"/>
+    
+    <bean id="emp" class="com.fnp.dto.Employee">
+		<constructor-arg value="1" type="int" />
+		<constructor-arg value="john" type="String" />
+		<property name="city" value="new york" />
+	</bean>		
+    		
+    	</property>
+    </bean>
+    
+</beans>
